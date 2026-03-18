@@ -23,10 +23,26 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { Icon: SiLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { Icon: SiYoutube, href: "https://youtube.com", label: "YouTube" },
-  { Icon: SiInstagram, href: "https://instagram.com", label: "Instagram" },
-  { Icon: SiFacebook, href: "https://facebook.com", label: "Facebook" },
+  {
+    Icon: SiLinkedin,
+    href: "https://www.linkedin.com/company/ayan-tech-solution",
+    label: "LinkedIn",
+  },
+  {
+    Icon: SiYoutube,
+    href: "https://www.youtube.com/@AyantechSolutions",
+    label: "YouTube",
+  },
+  {
+    Icon: SiInstagram,
+    href: "https://www.instagram.com/ayantechsolutions/",
+    label: "Instagram",
+  },
+  {
+    Icon: SiFacebook,
+    href: "https://www.facebook.com/profile.php?id=61586409788086",
+    label: "Facebook",
+  },
 ];
 
 export default function Footer() {

@@ -68,7 +68,7 @@ export default function InsightsSection({ insights }: Props) {
             Knowledge Hub
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-primary">
-            Insights.
+            Blogs.
           </h2>
         </motion.div>
 

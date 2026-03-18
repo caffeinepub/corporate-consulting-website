@@ -4,19 +4,15 @@ import { useState } from "react";
 import CareersBanner from "./components/CareersBanner";
 import CaseStudiesSection from "./components/CaseStudiesSection";
 import ContactModal from "./components/ContactModal";
-import EventsSection from "./components/EventsSection";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import InsightsSection from "./components/InsightsSection";
+import LocationMapSection from "./components/LocationMapSection";
 import Navigation from "./components/Navigation";
 import PromoVideoSection from "./components/PromoVideoSection";
 import ServicesSection from "./components/ServicesSection";
 import StatsBar from "./components/StatsBar";
-import {
-  useGetAllCaseStudies,
-  useGetAllEvents,
-  useGetAllInsights,
-} from "./hooks/useQueries";
+import { useGetAllCaseStudies, useGetAllInsights } from "./hooks/useQueries";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +20,6 @@ function AppContent() {
   const [contactOpen, setContactOpen] = useState(false);
   const { data: caseStudies = [] } = useGetAllCaseStudies();
   const { data: insights = [] } = useGetAllInsights();
-  const { data: events = [] } = useGetAllEvents();
 
   return (
     <div className="min-h-screen font-sans">
@@ -37,8 +32,8 @@ function AppContent() {
         <PromoVideoSection />
         <CaseStudiesSection caseStudies={caseStudies} />
         <InsightsSection insights={insights} />
-        <EventsSection events={events} />
         <CareersBanner />
+        <LocationMapSection />
       </main>
 
       <Footer />

@@ -54,13 +54,13 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <p className="text-sky-700 text-sm font-semibold uppercase tracking-[0.3em] mb-6">
+          <p className="text-red-600 text-sm font-semibold uppercase tracking-[0.3em] mb-6">
             SAP · EMR · ERP · RCM
           </p>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-[1.05] mb-8">
             AYAN TECH
             <br />
-            <span className="text-sky-700 italic">SOLUTION</span>
+            <span className="text-red-600 italic">SOLUTION</span>
           </h1>
           <p className="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
             Ayan Tech Solutions delivers expert SAP, ERP, EMR, and RCM services
