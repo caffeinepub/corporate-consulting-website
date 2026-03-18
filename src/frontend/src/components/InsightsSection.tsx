@@ -3,6 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import type { Insight } from "../backend.d";
 
+const blogImages = [
+  "/assets/uploads/Image-4--1.jpg",
+  "/assets/uploads/Image-3--2.jpg",
+  "/assets/uploads/Image-2--3.jpg",
+  "/assets/uploads/Image-1--4.jpg",
+];
+
 const seedInsights: Insight[] = [
   {
     id: "1",
@@ -83,6 +90,13 @@ export default function InsightsSection({ insights }: Props) {
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="group flex flex-col border border-border hover:border-primary transition-all duration-300"
             >
+              <div className="overflow-hidden h-48">
+                <img
+                  src={blogImages[i % blogImages.length]}
+                  alt={insight.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="h-1 bg-accent-gold w-full" />
               <div className="p-6 flex flex-col flex-1">
                 <Badge

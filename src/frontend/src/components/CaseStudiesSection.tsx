@@ -52,7 +52,7 @@ export default function CaseStudiesSection({ caseStudies }: Props) {
               Client Work
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-primary">
-              References.
+              Customer Review.
             </h2>
           </div>
         </motion.div>

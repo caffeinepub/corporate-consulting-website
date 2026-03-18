@@ -83,7 +83,7 @@ export default function HeroSection() {
               onClick={() => scrollTo("#references")}
               className="border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white font-semibold px-8 py-6 text-base rounded-none bg-transparent"
             >
-              Our References
+              Customer Review
             </Button>
           </div>
         </motion.div>
