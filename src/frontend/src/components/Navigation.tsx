@@ -80,7 +80,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
           <Button
             data-ocid="nav.primary_button"
             onClick={onContactOpen}
-            className="bg-accent-gold hover:bg-amber-500 text-primary font-semibold px-6 py-2 rounded-none transition-all duration-200"
+            className="bg-accent-gold hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-none transition-all duration-200"
           >
             Get in Touch
           </Button>
@@ -136,7 +136,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
                     onContactOpen();
                     setMobileOpen(false);
                   }}
-                  className="mt-4 bg-accent-gold hover:bg-amber-500 text-primary font-semibold rounded-none w-full"
+                  className="mt-4 bg-accent-gold hover:bg-red-700 text-white font-semibold rounded-none w-full"
                 >
                   Get in Touch
                 </Button>

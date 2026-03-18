@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { SiFacebook, SiInstagram, SiLinkedin, SiYoutube } from "react-icons/si";
 import { toast } from "sonner";
@@ -49,9 +49,9 @@ export default function Footer() {
   return (
     <footer className="section-dark" id="contact">
       <div className="container max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="mb-4">
               <img
                 src="/assets/generated/logo-transparent.png"
@@ -66,6 +66,39 @@ export default function Footer() {
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               SAP · EMR · ERP · RCM — technology that works for you.
             </p>
+
+            {/* Contact Details */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-accent-gold flex-shrink-0 mt-0.5" />
+                <p className="text-white/60 text-sm leading-relaxed">
+                  No: 184-187, Temple steps, Block 3, 9th Floor,
+                  <br />
+                  Anna Salai, Little Mount, Saidapet,
+                  <br />
+                  Chennai - 600 015
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-accent-gold flex-shrink-0" />
+                <a
+                  href="tel:+918754495604"
+                  className="text-white/60 hover:text-accent-gold text-sm transition-colors duration-200"
+                >
+                  +91875-449-5604
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-accent-gold flex-shrink-0" />
+                <a
+                  href="mailto:info@ayantech.com"
+                  className="text-white/60 hover:text-accent-gold text-sm transition-colors duration-200"
+                >
+                  info@ayantech.com
+                </a>
+              </div>
+            </div>
+
             <div className="flex items-center gap-4">
               {socialLinks.map(({ Icon, href, label }) => (
                 <a
@@ -143,7 +176,7 @@ export default function Footer() {
               <Button
                 type="submit"
                 data-ocid="footer.submit_button"
-                className="rounded-none bg-accent-gold hover:bg-amber-500 text-primary px-3 flex-shrink-0"
+                className="rounded-none bg-accent-gold hover:bg-red-700 text-white px-3 flex-shrink-0"
               >
                 <ArrowRight className="h-4 w-4" />
               </Button>

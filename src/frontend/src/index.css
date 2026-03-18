@@ -39,9 +39,9 @@
     --muted: 0.94 0.008 255;
     --muted-foreground: 0.48 0.02 258;
 
-    /* Warm amber accent - unexpected for consulting, memorable */
-    --accent: 0.72 0.18 52;
-    --accent-foreground: 0.12 0.04 255;
+    /* Red accent */
+    --accent: 0.55 0.22 25;
+    --accent-foreground: 0.98 0.002 240;
 
     --destructive: 0.55 0.22 27;
     --destructive-foreground: 0.98 0.002 240;
@@ -52,7 +52,7 @@
     --radius: 0.25rem;
 
     --chart-1: 0.62 0.19 258;
-    --chart-2: 0.72 0.18 52;
+    --chart-2: 0.55 0.22 25;
     --chart-3: 0.55 0.14 175;
     --chart-4: 0.65 0.17 30;
     --chart-5: 0.48 0.14 290;
@@ -97,13 +97,13 @@
     color: oklch(0.96 0.005 240);
   }
   .text-accent-gold {
-    color: oklch(0.72 0.18 52);
+    color: oklch(0.55 0.22 25);
   }
   .bg-accent-gold {
-    background-color: oklch(0.72 0.18 52);
+    background-color: oklch(0.55 0.22 25);
   }
   .border-accent-gold {
-    border-color: oklch(0.72 0.18 52);
+    border-color: oklch(0.55 0.22 25);
   }
   .hover-lift {
     @apply transition-transform duration-300 hover:-translate-y-1;

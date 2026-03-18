@@ -13,7 +13,7 @@ export default function CareersBanner() {
         className="absolute right-0 top-0 bottom-0 w-1/3 opacity-10"
         style={{
           background:
-            "radial-gradient(ellipse at right center, oklch(0.72 0.18 52), transparent 70%)",
+            "radial-gradient(ellipse at right center, oklch(0.55 0.22 25), transparent 70%)",
         }}
       />
       <div className="absolute -left-8 -bottom-8 w-48 h-48 border border-white/10 rotate-12" />
@@ -40,7 +40,7 @@ export default function CareersBanner() {
             </p>
             <Button
               data-ocid="careers.primary_button"
-              className="bg-accent-gold hover:bg-amber-500 text-primary font-semibold px-8 py-6 text-base rounded-none group"
+              className="bg-accent-gold hover:bg-red-700 text-white font-semibold px-8 py-6 text-base rounded-none group"
             >
               Join Us
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
