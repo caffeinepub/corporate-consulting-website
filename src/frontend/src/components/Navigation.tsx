@@ -38,7 +38,6 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
       style={{ backgroundColor: "#0a1628" }}
     >
       <div className="container max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo */}
         <button
           type="button"
           className="flex items-center gap-2 bg-transparent"
@@ -52,7 +51,6 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
           />
         </button>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -60,7 +58,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
               href={link.href}
               data-ocid="nav.link"
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm font-medium tracking-wide text-white/90 transition-colors hover:text-red-500"
+              className="text-sm font-bold tracking-wide text-white/90 transition-colors hover:text-red-500"
             >
               {link.label}
             </a>
@@ -74,7 +72,6 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
           </Button>
         </nav>
 
-        {/* Mobile Menu */}
         <div className="lg:hidden">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
@@ -110,7 +107,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
                     href={link.href}
                     data-ocid="nav.link"
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-lg font-medium text-white/80 hover:text-red-500 transition-colors"
+                    className="text-lg font-bold text-white/80 hover:text-red-500 transition-colors"
                   >
                     {link.label}
                   </a>

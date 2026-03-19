@@ -1,4 +1,3 @@
-import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 
 const YOUTUBE_VIDEO_ID = "dep5immO3qo";
@@ -44,15 +43,15 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="max-w-xl"
+          className="max-w-3xl"
         >
           <h1
             style={{
               fontFamily: "'Abril Fatface', cursive",
               fontWeight: 900,
               letterSpacing: "0.01em",
-              fontSize: "50px",
-              lineHeight: 1.1,
+              fontSize: "100px",
+              lineHeight: 1.0,
               marginBottom: "2rem",
             }}
           >
@@ -70,21 +69,6 @@ export default function HeroSection() {
           </p>
         </motion.div>
       </div>
-
-      <motion.div
-        className="absolute bottom-8 right-8 text-gray-600 flex flex-col items-center gap-2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-      >
-        <span className="text-xs uppercase tracking-widest">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-        >
-          <ChevronDown className="h-5 w-5" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
