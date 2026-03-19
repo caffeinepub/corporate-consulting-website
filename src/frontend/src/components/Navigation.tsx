@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface NavigationProps {
   onContactOpen: () => void;
@@ -17,14 +17,7 @@ const navLinks = [
 ];
 
 export default function Navigation({ onContactOpen }: NavigationProps) {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -41,11 +34,8 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-border"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-white/20 shadow-md"
+      style={{ backgroundColor: "#0a1628" }}
     >
       <div className="container max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
@@ -70,9 +60,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
               href={link.href}
               data-ocid="nav.link"
               onClick={(e) => handleNavClick(e, link.href)}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-accent-gold ${
-                scrolled ? "text-foreground" : "text-white/90"
-              }`}
+              className="text-sm font-medium tracking-wide text-white/90 transition-colors hover:text-red-500"
             >
               {link.label}
             </a>
@@ -80,7 +68,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
           <Button
             data-ocid="nav.primary_button"
             onClick={onContactOpen}
-            className="bg-accent-gold hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-none transition-all duration-200"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-none transition-all duration-200"
           >
             Get in Touch
           </Button>
@@ -90,17 +78,14 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
         <div className="lg:hidden">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className={scrolled ? "text-foreground" : "text-white"}
-              >
+              <Button variant="ghost" size="icon" className="text-white">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-72 bg-primary text-white border-none"
+              className="w-72 text-white border-none"
+              style={{ backgroundColor: "#0a1628" }}
             >
               <div className="flex items-center justify-between mb-10 mt-2">
                 <img
@@ -125,7 +110,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
                     href={link.href}
                     data-ocid="nav.link"
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-lg font-medium text-white/80 hover:text-accent-gold transition-colors"
+                    className="text-lg font-medium text-white/80 hover:text-red-500 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -136,7 +121,7 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
                     onContactOpen();
                     setMobileOpen(false);
                   }}
-                  className="mt-4 bg-accent-gold hover:bg-red-700 text-white font-semibold rounded-none w-full"
+                  className="mt-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-none w-full"
                 >
                   Get in Touch
                 </Button>

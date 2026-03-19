@@ -1,18 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 
 const YOUTUBE_VIDEO_ID = "dep5immO3qo";
 
 export default function HeroSection() {
-  const scrollTo = (id: string) => {
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* YouTube video background */}
+    <section className="relative min-h-screen flex items-end overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <iframe
           src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&iv_load_policy=3&fs=0&start=0`}
@@ -29,7 +22,6 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* White gradient overlay */}
       <div
         className="absolute inset-0"
         style={{
@@ -38,7 +30,6 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Decorative grid lines */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -48,50 +39,40 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 container max-w-7xl mx-auto px-6 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pb-24">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="max-w-xl"
         >
-          <p className="text-red-600 text-sm font-semibold uppercase tracking-[0.3em] mb-6">
-            SAP · EMR · ERP · RCM
-          </p>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-[1.05] mb-8">
-            AYAN TECH
+          <h1
+            style={{
+              fontFamily: "'Abril Fatface', cursive",
+              fontWeight: 900,
+              letterSpacing: "0.01em",
+              fontSize: "50px",
+              lineHeight: 1.1,
+              marginBottom: "2rem",
+            }}
+          >
+            <span className="text-white">Ayan Tech</span>
             <br />
-            <span className="text-red-600 italic">SOLUTION</span>
+            <span style={{ color: "#006994" }}>Solutions</span>
           </h1>
-          <p className="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+          <p
+            className="text-white font-bold text-lg md:text-xl leading-relaxed"
+            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
+          >
             Ayan Tech Solutions delivers expert SAP, ERP, EMR, and RCM services
             to modernize operations, streamline healthcare, and accelerate
             business growth.
           </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              data-ocid="hero.primary_button"
-              onClick={() => scrollTo("#services")}
-              className="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-8 py-6 text-base rounded-none group border border-sky-400"
-            >
-              Explore Services
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              data-ocid="hero.secondary_button"
-              variant="outline"
-              onClick={() => scrollTo("#references")}
-              className="border-gray-400 text-gray-700 hover:bg-gray-900 hover:text-white font-semibold px-8 py-6 text-base rounded-none bg-transparent"
-            >
-              Customer Review
-            </Button>
-          </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-600 flex flex-col items-center gap-2"
+        className="absolute bottom-8 right-8 text-gray-600 flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
