@@ -58,7 +58,8 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
               href={link.href}
               data-ocid="nav.link"
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm font-bold tracking-wide text-white/90 transition-colors hover:text-red-500"
+              className="font-bold tracking-wide text-white/90 transition-colors hover:text-red-500"
+              style={{ fontSize: "50px" }}
             >
               {link.label}
             </a>
@@ -107,7 +108,8 @@ export default function Navigation({ onContactOpen }: NavigationProps) {
                     href={link.href}
                     data-ocid="nav.link"
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-lg font-bold text-white/80 hover:text-red-500 transition-colors"
+                    className="font-bold text-white/80 hover:text-red-500 transition-colors"
+                    style={{ fontSize: "50px" }}
                   >
                     {link.label}
                   </a>
