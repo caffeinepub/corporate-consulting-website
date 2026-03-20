@@ -59,14 +59,6 @@ export default function HeroSection() {
             <br />
             <span style={{ color: "#006994" }}>Solutions</span>
           </h1>
-          <p
-            className="text-white font-bold text-lg md:text-xl leading-relaxed"
-            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
-          >
-            Ayan Tech Solutions delivers expert SAP, ERP, EMR, and RCM services
-            to modernize operations, streamline healthcare, and accelerate
-            business growth.
-          </p>
         </motion.div>
       </div>
     </section>
